@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Sysomos_web</display-name>
+  <session-config>
+  <session-timeout>50</session-timeout>
+  </session-config>
+  <welcome-file-list>
+    <welcome-file>homepage</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+	<description>Shows stuff on the homepage</description>
+	<display-name>Homepage Servlet</display-name>
+	<servlet-name>HomepageServlet</servlet-name>		
+	<servlet-class>com.motorola.sysomos.GetTweets</servlet-class>
+</servlet>
+
+
+<servlet-mapping>
+	<servlet-name>HomepageServlet</servlet-name>
+	<url-pattern>/homepage</url-pattern>
+</servlet-mapping>
+  
+</web-app>
